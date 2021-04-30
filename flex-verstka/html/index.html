@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header__name site__name" id="home">Informatic's history</div>
+      <div class="header__tools">
+        <div class="header__about">FAQ</div>
+        <div class="header__account">
+          <p class="header__user-name">Unknown user</p>
+          <form method="GET">
+            <input
+              type="submit"
+              name="LogIn"
+              value="LogIn"
+              class="header__user-button"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="main__container">
+        <div class="main__item">
+          <div class="main__item__title" id="prehistory">Введение</div>
+          <div class="main__item__text">
+            <p>
+              Человеческое общество по мере своего развития овладевало не только
+              веществом и энергией, но и информацией. С появлением и массовым
+              распространение компьютеров человек получил мощное средство для
+              эффективного использования информационных ресурсов, для усиления
+              своей интеллектуальной деятельности. С этого момента (середина XX
+              века) начался переход от индустриального общества к обществу
+              информационному, в котором главным ресурсом становится информация.
+              Возможность использования членами общества полной, своевременной и
+              достоверной информации в значительной мере зависит от степени
+              развития и освоения новых информационных технологий, основой
+              которых являются компьютеры. Рассмотрим основные вехи в истории их
+              развития.
+            </p>
+          </div>
+          <div class="image__container">
+            <div class="image__corner__up"></div>
+            <div class="image__corner__down"></div>
+            <img src="../resourse/1.png" class="img" />
+          </div>
+          <div class="image__container">
+            <div class="image__corner__up"></div>
+            <div class="image__corner__down"></div>
+            <img src="../resourse/3.jpg" class="img" />
+          </div>
+          <div class="image__container">
+            <div class="image__corner__up"></div>
+            <div class="image__corner__down"></div>
+            <img src="../resourse/4.jpg" class="img" />
+          </div>
+          <div class="image__container">
+            <div class="image__corner__up"></div>
+            <div class="image__corner__down"></div>
+            <img src="../resourse/5.jpg" class="img" />
+          </div>
+        </div>
+        <div class="main__item">
+          <div class="main__item__title" id="generation1">Поколение 1</div>
+          <div class="main__item__text">
+            <p>
+              Скорость счета самых быстрых машин первого поколения доходила до
+              20 тысяч операций в секунду. Для ввода программ и данных
+              использовались перфоленты и перфокарты. Поскольку внутренняя
+              память этих машин была невелика (могла вместить в себя несколько
+              тысяч чисел и команд программы), то они, главным образом,
+              использовались для инженерных и научных расчетов, не связанных с
+              переработкой больших объемов данных. Это были довольно громоздкие
+              сооружения, содержавшие в себе тысячи ламп, занимавшие иногда
+              сотни квадратных метров, потреблявшие электроэнергию в сотни
+              киловатт. Программы для таких машин составлялись на языках
+              машинных команд, поэтому программирование в те времена было
+              доступно немногим.
+            </p>
+          </div>
+        </div>
+        <div class="main__item">
+          <div class="main__item__title" id="final">Вывод</div>
+          <div class="main__item__text">
+            <p>
+              Разработки в области вычислительной техники продолжаются. ЭВМ
+              пятого поколения — это машины недалекого будущего. Основным их
+              качеством должен быть высокий интеллектуальный уровень. В них
+              будет возможным ввод с голоса, голосовое общение, машинное
+              «зрение», машинное «осязание». Машины пятого поколения — это
+              реализованный искусственный интеллект.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main__sidebar">
+        <div class="sidebar__navigator">
+          <div class="sidebar__title">Содержание</div>
+          <div class="sidebar__content">
+            <ul>
+              <li>
+                <a href="#home" class="nav__btn">Home</a>
+              </li>
+              <li>
+                <a href="#prehistory" class="nav__btn">Введение</a>
+              </li>
+              <li>
+                <a href="#generation1" class="nav__btn">Поколение 1</a>
+              </li>
+              <li>
+                <a href="#final" class="nav__btn">Заключение</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <div class="footer__content">
+        <div class="footer__name site__name">Informatic's history</div>
+        <div class="footer__follow">
+          <p>Follow me in:</p>
+          <img src="../resourse/vk.png" />
+        </div>
+      </div>
+      <div class="footer__creators">Created by 4aik's Corp 2021</div>
+    </footer>
+    <script>
+      let navBtn = document.querySelectorAll(".nav__btn");
+      for (let i = 0; i < navBtn.length; i++) {
+        navBtn[i].onclick = function () {
+          highlight.apply(this);
+        };
+      }
+      function highlight() {
+        let mask = this.href.split("#");
+        let title = document.getElementById(mask[1]);
+        title.style.textDecoration = "underline";
+        title.style.color = "lightgreen";
+
+        let stopHighlight = setTimeout(() => {
+          title.style.textDecoration = "none";
+          title.style.color = "inherit";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
